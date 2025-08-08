@@ -7,6 +7,8 @@ public class PlayerMovement : MonoBehaviour
     private Vector2 _movementInput;
     [SerializeField]
     private float _speed;
+    private Vector2 _smoothedMovementInput;
+    private Vector2 _movementInputSmoothVelocity;
 
     // Unity is calling this when scene is first initialized
     private void Awake()
@@ -16,7 +18,13 @@ public class PlayerMovement : MonoBehaviour
 
     private void FixedUpdate()
     {
-        _rigidbody.linearVelocity = _movementInput * _speed;
+        _smoothedMovementInput = Vector2.SmoothDamp(
+            _smoothedMovementInput,
+            _movementInput,
+            ref _movementInputSmoothVelocity,
+            0.1f);
+
+        _rigidbody.linearVelocity = _smoothedMovementInput * _speed;
     }
 
     private void OnMove(InputValue inputValue)
