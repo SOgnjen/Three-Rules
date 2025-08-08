@@ -9,8 +9,6 @@ public class PlayerMovement : MonoBehaviour
     private float _speed;
     private Vector2 _smoothedMovementInput;
     private Vector2 _movementInputSmoothVelocity;
-    [SerializeField]
-    private float _rotationSpeed;
     private SpriteRenderer _spriteRenderer;
 
     private void Awake()
