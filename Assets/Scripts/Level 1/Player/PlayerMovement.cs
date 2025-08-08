@@ -9,22 +9,43 @@ public class PlayerMovement : MonoBehaviour
     private float _speed;
     private Vector2 _smoothedMovementInput;
     private Vector2 _movementInputSmoothVelocity;
+    [SerializeField]
+    private float _rotationSpeed;
+    private SpriteRenderer _spriteRenderer;
 
-    // Unity is calling this when scene is first initialized
     private void Awake()
     {
         _rigidbody = GetComponent<Rigidbody2D>();
+        _spriteRenderer = GetComponentInChildren<SpriteRenderer>();
     }
 
     private void FixedUpdate()
     {
+        SetPlayerVelocity();
+        UpdateSpriteDirection();
+    }
+
+    private void SetPlayerVelocity()
+    {
         _smoothedMovementInput = Vector2.SmoothDamp(
-            _smoothedMovementInput,
-            _movementInput,
-            ref _movementInputSmoothVelocity,
-            0.1f);
+                    _smoothedMovementInput,
+                    _movementInput,
+                    ref _movementInputSmoothVelocity,
+                    0.1f);
 
         _rigidbody.linearVelocity = _smoothedMovementInput * _speed;
+    }
+
+    private void UpdateSpriteDirection()
+    {
+        if (_smoothedMovementInput.x > 0.01f)
+        {
+            _spriteRenderer.flipX = false;
+        }
+        else if (_smoothedMovementInput.x < -0.01f)
+        {
+            _spriteRenderer.flipX = true;
+        }
     }
 
     private void OnMove(InputValue inputValue)
