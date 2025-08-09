@@ -47,7 +47,7 @@ TagManager:
   - name: Collectable
     uniqueID: 693109037
     locked: 0
-  - name: Bullet
+  - name: Attack
     uniqueID: 251774597
     locked: 0
   - name: Player

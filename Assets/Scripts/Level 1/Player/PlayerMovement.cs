@@ -9,12 +9,12 @@ public class PlayerMovement : MonoBehaviour
     private float _speed;
     private Vector2 _smoothedMovementInput;
     private Vector2 _movementInputSmoothVelocity;
-    private SpriteRenderer _spriteRenderer;
+    private SpriteRenderer[] _spriteRenderer;
 
     private void Awake()
     {
         _rigidbody = GetComponent<Rigidbody2D>();
-        _spriteRenderer = GetComponentInChildren<SpriteRenderer>();
+        _spriteRenderer = GetComponentsInChildren<SpriteRenderer>();
     }
 
     private void FixedUpdate()
@@ -38,11 +38,17 @@ public class PlayerMovement : MonoBehaviour
     {
         if (_smoothedMovementInput.x > 0.01f)
         {
-            _spriteRenderer.flipX = false;
+            foreach(var sr in _spriteRenderer)
+            {
+                sr.flipX = false;
+            }
         }
         else if (_smoothedMovementInput.x < -0.01f)
         {
-            _spriteRenderer.flipX = true;
+            foreach(var sr in _spriteRenderer)
+            {
+                sr.flipX = true;
+            }
         }
     }
 
