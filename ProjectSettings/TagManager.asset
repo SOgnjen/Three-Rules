@@ -56,5 +56,8 @@ TagManager:
   - name: Enemy
     uniqueID: 513247781
     locked: 0
+  - name: Crystal
+    uniqueID: 2791491587
+    locked: 0
   m_RenderingLayers:
   - Default

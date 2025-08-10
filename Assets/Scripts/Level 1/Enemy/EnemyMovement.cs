@@ -27,11 +27,11 @@ public class EnemyMovement : MonoBehaviour
     {
         if(_playerAwarenessController.AwareOfPlayer)
         {
-            _targetDirection = _playerAwarenessController.DirectionToPLayer;
+            _targetDirection = _playerAwarenessController.DirectionToPlayer;
         }
         else
         {
-            _targetDirection = Vector2.zero;
+            _targetDirection = _playerAwarenessController.DirectionToCrystal;
         }
     }
 
