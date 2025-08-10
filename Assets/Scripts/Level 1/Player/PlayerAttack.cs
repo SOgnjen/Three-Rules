@@ -41,7 +41,8 @@ public class PlayerAttack : MonoBehaviour
 
     private void OnAttack(InputValue inputValue)
     {
-        if(inputValue.isPressed)
+        if (!enabled) return;
+        if (inputValue.isPressed)
         {
                 FireBullet();
 
