@@ -7,6 +7,7 @@ public class HealthController : MonoBehaviour
     private float _currentHealth;
     [SerializeField]
     private float _maximumHealth;
+    public bool IsInvincible;
 
     public float RemainingHealth
     {
@@ -18,9 +19,16 @@ public class HealthController : MonoBehaviour
 
     public UnityEvent OnDied;
 
+    public UnityEvent OnDamaged;
+
     public void TakeDamage(float damageAmount)
     {
         if (_currentHealth == 0)
+        {
+            return;
+        }
+
+        if (IsInvincible)
         {
             return;
         }
@@ -35,6 +43,10 @@ public class HealthController : MonoBehaviour
         if(_currentHealth == 0 )
         {
             OnDied.Invoke();
+        }
+        else
+        {
+            OnDamaged.Invoke();
         }
     }
 
