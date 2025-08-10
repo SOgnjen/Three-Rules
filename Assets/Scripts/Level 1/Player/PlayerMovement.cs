@@ -10,11 +10,15 @@ public class PlayerMovement : MonoBehaviour
     private Vector2 _smoothedMovementInput;
     private Vector2 _movementInputSmoothVelocity;
     private SpriteRenderer[] _spriteRenderer;
+    private Camera _camera;
+    [SerializeField]
+    private float _screenBorder;
 
     private void Awake()
     {
         _rigidbody = GetComponent<Rigidbody2D>();
         _spriteRenderer = GetComponentsInChildren<SpriteRenderer>();
+        _camera = Camera.main;
     }
 
     private void FixedUpdate()
@@ -32,6 +36,23 @@ public class PlayerMovement : MonoBehaviour
                     0.1f);
 
         _rigidbody.linearVelocity = _smoothedMovementInput * _speed;
+
+        PreventPlayerGoingOffScreen();
+    }
+
+    private void PreventPlayerGoingOffScreen()
+    {
+        Vector2 screenPosition = _camera.WorldToScreenPoint(transform.position);
+
+        if((screenPosition.x < _screenBorder && _rigidbody.linearVelocity.x < 0) || (screenPosition.x > _camera.pixelWidth - _screenBorder && _rigidbody.linearVelocity.x > 0))
+        {
+            _rigidbody.linearVelocity = new Vector2(0, _rigidbody.linearVelocity.y);
+        }
+
+        if ((screenPosition.y < _screenBorder && _rigidbody.linearVelocity.y < 0) || (screenPosition.y > _camera.pixelHeight - _screenBorder && _rigidbody.linearVelocity.y > 0))
+        {
+            _rigidbody.linearVelocity = new Vector2(_rigidbody.linearVelocity.x, 0);
+        }
     }
 
     private void UpdateSpriteDirection()
