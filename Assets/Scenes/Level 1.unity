@@ -541,6 +541,37 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &720541603
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 720541604}
+  m_Layer: 0
+  m_Name: StaffOffset
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &720541604
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 720541603}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.23, y: -0.12, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 995637535}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &995637532
 GameObject:
   m_ObjectHideFlags: 0
@@ -604,6 +635,7 @@ Transform:
   m_Children:
   - {fileID: 2010528895}
   - {fileID: 691823003}
+  - {fileID: 720541604}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &995637536
@@ -698,7 +730,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _attackPrefab: {fileID: 7676611851666091590, guid: ac83cbf37f0fb2445a074a7a760a02cd, type: 3}
-  _attackSpeed: 1
+  _attackSpeed: 5
+  _shootOffsetRight: {x: 0.23, y: -0.12}
+  _shootOffsetLeft: {x: -0.23, y: -0.12}
+  _timeBetweenAttacks: 0.1
 --- !u!1 &1189359272
 GameObject:
   m_ObjectHideFlags: 0

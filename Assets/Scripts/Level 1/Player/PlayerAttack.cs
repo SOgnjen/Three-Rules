@@ -8,10 +8,14 @@ public class PlayerAttack : MonoBehaviour
     [SerializeField]
     private float _attackSpeed;
     private Camera _mainCamera;
+    public Vector2 _shootOffsetRight = new Vector2(0.23f, -0.12f);
+    public Vector2 _shootOffsetLeft = new Vector2(-0.23f, -0.12f);
+    private SpriteRenderer _spriteRenderer;
 
     private void Awake()
     {
         _mainCamera = Camera.main;
+        _spriteRenderer = GetComponentInChildren<SpriteRenderer>();
     }
 
     private void FireBullet()
@@ -21,7 +25,9 @@ public class PlayerAttack : MonoBehaviour
 
         Vector2 direction = (mouseWorldPos - transform.position).normalized;
 
-        GameObject attack = Instantiate(_attackPrefab, transform.position, Quaternion.identity);
+        Vector2 shootPos = (Vector2)transform.position + (_spriteRenderer.flipX ? _shootOffsetLeft : _shootOffsetRight);
+
+        GameObject attack = Instantiate(_attackPrefab, shootPos, Quaternion.identity);
 
         Rigidbody2D rigidbody = attack.GetComponent<Rigidbody2D>();
         if (rigidbody != null)
@@ -37,7 +43,8 @@ public class PlayerAttack : MonoBehaviour
     {
         if(inputValue.isPressed)
         {
-            FireBullet();
+                FireBullet();
+
         }
     }
 }
