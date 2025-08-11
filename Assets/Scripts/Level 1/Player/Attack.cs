@@ -18,7 +18,8 @@ public class Attack : MonoBehaviour
     {
         if (collision.GetComponent<EnemyMovement>())
         {
-            Destroy(collision.gameObject);
+            HealthController healthController = collision.GetComponent<HealthController>();
+            healthController.TakeDamage(10);
             Destroy(gameObject);
         }
     }

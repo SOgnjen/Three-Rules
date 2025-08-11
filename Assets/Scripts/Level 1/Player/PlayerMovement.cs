@@ -87,4 +87,9 @@ public class PlayerMovement : MonoBehaviour
     {
         _movementInput = inputValue.Get<Vector2>();
     }
+
+    public void StopMovement()
+    {
+        _rigidbody.linearVelocity = Vector2.zero;
+    }
 }

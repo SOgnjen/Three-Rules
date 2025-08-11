@@ -61,4 +61,9 @@ public class EnemyMovement : MonoBehaviour
             _rigidbody.linearVelocity = _targetDirection.normalized * _speed;
         }
     }
+
+    public void StopMovement()
+    {
+        _rigidbody.linearVelocity = Vector2.zero;
+    }
 }
