@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 3060232572067725276}
   - component: {fileID: 1760237579271470467}
   m_Layer: 0
-  m_Name: EnemySpawner
+  m_Name: DemonSpawner
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -45,5 +45,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _enemyPrefab: {fileID: 4249952603503798126, guid: dde9dfc47dae17041885eb79195f6549, type: 3}
-  _minimumSpawnTime: 2
-  _maximumSpawnTime: 5
+  _minimumSpawnTime: 30
+  _maximumSpawnTime: 45

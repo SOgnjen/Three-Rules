@@ -20,7 +20,7 @@ GameObject:
   - component: {fileID: 7250953889471149589}
   - component: {fileID: 8239797132115215522}
   m_Layer: 0
-  m_Name: Enemy
+  m_Name: Demon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -36,7 +36,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 2.39, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.8704046, y: 1.8704046, z: 1.8704046}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 2228658842161833970}
@@ -81,7 +81,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0576a28441c630d42bd20e8001bda0db, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _speed: 1
+  _speed: 0.5
 --- !u!114 &3895707525595542571
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -94,7 +94,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5ec920059d5d7a044afe2d2e43a77eb3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _playerAwarenessDistance: 5
+  _playerAwarenessDistance: 3
 --- !u!58 &6600021840498830690
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -143,7 +143,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1c7edec10bffe08438d7d59afc4b806f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _damageAmount: 10
+  _damageAmount: 30
 --- !u!95 &4886526066925290410
 Animator:
   serializedVersion: 7
@@ -178,8 +178,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3a23b897f0008824c8eda87567ab3359, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _currentHealth: 20
-  _maximumHealth: 20
+  _currentHealth: 50
+  _maximumHealth: 50
   IsInvincible: 0
   OnDied:
     m_PersistentCalls:
@@ -310,7 +310,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 38381a93a7c9c8f499a9f4bfca8b3b91, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _killScore: 10
+  _killScore: 50
 --- !u!114 &8239797132115215522
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -323,7 +323,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2e109539eb269c747b61a0154eb980a1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _chanceOfCollectableDrop: 0.3
+  _chanceOfCollectableDrop: 0.5
 --- !u!1 &9067653469206471675
 GameObject:
   m_ObjectHideFlags: 0
