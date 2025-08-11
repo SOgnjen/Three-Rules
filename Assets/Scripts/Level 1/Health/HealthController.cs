@@ -85,4 +85,9 @@ public class HealthController : MonoBehaviour
     {
         _animator.SetBool("IsHit", false);
     }
+
+    public float MaximumHealth
+    {
+        get { return _maximumHealth; }
+    }
 }

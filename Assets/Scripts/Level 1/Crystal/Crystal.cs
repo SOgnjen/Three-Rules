@@ -6,7 +6,9 @@ public class Crystal : MonoBehaviour
     {
         if (collision.GetComponent<EnemyMovement>())
         {
-            Destroy(collision.gameObject);
+            HealthController healthController = collision.GetComponent<HealthController>();
+            float maxHealth = healthController.MaximumHealth;
+            healthController.TakeDamage(maxHealth);
         }
     }
 }
