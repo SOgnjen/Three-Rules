@@ -93,9 +93,9 @@ public class HealthController : MonoBehaviour
 
     public void ForceKill()
     {
-        _currentHealth = 0;
-        OnDied.Invoke();
-
-        _animator.SetBool("IsDead", true);
+        if (_currentHealth > 0)
+        {
+            TakeDamage(_currentHealth);
+        }
     }
 }
