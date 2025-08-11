@@ -5,8 +5,10 @@ public class HealthController : MonoBehaviour
 {
     [SerializeField]
     private float _currentHealth;
+
     [SerializeField]
     private float _maximumHealth;
+
     public bool IsInvincible;
     private Animator _animator;
 
@@ -95,6 +97,7 @@ public class HealthController : MonoBehaviour
     {
         if (_currentHealth > 0)
         {
+            IsInvincible = false;
             TakeDamage(_currentHealth);
         }
     }

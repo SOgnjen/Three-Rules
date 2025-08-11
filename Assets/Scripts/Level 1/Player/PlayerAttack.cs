@@ -5,8 +5,10 @@ public class PlayerAttack : MonoBehaviour
 {
     [SerializeField]
     private GameObject _attackPrefab;
+
     [SerializeField]
     private float _attackSpeed;
+
     private Camera _mainCamera;
     public Vector2 _shootOffsetRight = new Vector2(0.23f, -0.12f);
     public Vector2 _shootOffsetLeft = new Vector2(-0.23f, -0.12f);

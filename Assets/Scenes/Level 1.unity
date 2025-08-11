@@ -1255,7 +1255,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3a23b897f0008824c8eda87567ab3359, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _currentHealth: 10
+  _currentHealth: 100
   _maximumHealth: 100
   IsInvincible: 0
   OnDied:
@@ -2290,6 +2290,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _collectablePrefabs:
   - {fileID: 6381436514076354489, guid: ba95787d6835a9d48b12ba6d1dfb5370, type: 3}
+  - {fileID: 7875614561304493518, guid: ccdbfb14aea57d64b8e0c363dd0ec327, type: 3}
 --- !u!4 &2135995004
 Transform:
   m_ObjectHideFlags: 0

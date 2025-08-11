@@ -3,16 +3,18 @@ using UnityEngine.InputSystem;
 
 public class PlayerMovement : MonoBehaviour
 {
-    private Rigidbody2D _rigidbody;
-    private Vector2 _movementInput;
     [SerializeField]
     private float _speed;
+
+    [SerializeField]
+    private float _screenBorder;
+
+    private Rigidbody2D _rigidbody;
+    private Vector2 _movementInput;
     private Vector2 _smoothedMovementInput;
     private Vector2 _movementInputSmoothVelocity;
     private SpriteRenderer[] _spriteRenderer;
     private Camera _camera;
-    [SerializeField]
-    private float _screenBorder;
     private Animator _animator;
 
     private void Awake()

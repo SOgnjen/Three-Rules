@@ -80,6 +80,10 @@ PrefabInstance:
       propertyPath: OnDied.m_PersistentCalls.m_Calls.Array.data[7].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
+    - target: {fileID: 6600021840498830690, guid: dde9dfc47dae17041885eb79195f6549, type: 3}
+      propertyPath: m_Radius
+      value: 0.14
+      objectReference: {fileID: 0}
     - target: {fileID: 7250953889471149589, guid: dde9dfc47dae17041885eb79195f6549, type: 3}
       propertyPath: _killScore
       value: 10

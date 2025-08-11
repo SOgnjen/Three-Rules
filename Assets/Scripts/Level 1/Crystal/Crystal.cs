@@ -2,9 +2,11 @@ using UnityEngine;
 
 public class Crystal : MonoBehaviour
 {
-    private int _collisions = 0;
     [SerializeField]
     private HealthController _healthController;
+
+    private int _collisions = 0;
+
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.GetComponent<EnemyMovement>())
@@ -22,6 +24,15 @@ public class Crystal : MonoBehaviour
                     _healthController.ForceKill();
                 }
             }
+        }
+    }
+
+    public void ReduceCollisions()
+    {
+        _collisions--;
+        if (_collisions < 0)
+        {
+            _collisions = 0;
         }
     }
 }

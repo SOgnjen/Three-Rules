@@ -12,6 +12,7 @@ public class EnemySpawner : MonoBehaviour
     private float _maximumSpawnTime;
 
     private float _timeUntilSpawn;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
