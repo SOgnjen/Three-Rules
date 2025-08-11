@@ -13,18 +13,28 @@ public class PlayerMovement : MonoBehaviour
     private Camera _camera;
     [SerializeField]
     private float _screenBorder;
+    private Animator _animator;
 
     private void Awake()
     {
         _rigidbody = GetComponent<Rigidbody2D>();
         _spriteRenderer = GetComponentsInChildren<SpriteRenderer>();
         _camera = Camera.main;
+        _animator = GetComponent<Animator>();
     }
 
     private void FixedUpdate()
     {
         SetPlayerVelocity();
         UpdateSpriteDirection();
+        setAnimation();
+    }
+
+    private void setAnimation()
+    {
+        bool isMoving = _movementInput != Vector2.zero;
+
+        _animator.SetBool("IsMoving", isMoving);
     }
 
     private void SetPlayerVelocity()
