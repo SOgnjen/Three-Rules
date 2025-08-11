@@ -3,9 +3,11 @@ using UnityEngine.SceneManagement;
 
 public class MainMenu : MonoBehaviour
 {
+    [SerializeField]
+    private SceneController _sceneController;
     public void PressStart()
     {
-        SceneManager.LoadScene("Level 1");
+        _sceneController.LoadScene("Level 1");
     }
 
     public void Quit()
