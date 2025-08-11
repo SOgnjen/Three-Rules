@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1001 &504931510242797048
+--- !u!1001 &6181261836866338160
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -8,49 +8,85 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2228658842161833970, guid: dde9dfc47dae17041885eb79195f6549, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 2.5273
+      objectReference: {fileID: 0}
+    - target: {fileID: 2228658842161833970, guid: dde9dfc47dae17041885eb79195f6549, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 2.5273
+      objectReference: {fileID: 0}
+    - target: {fileID: 2228658842161833970, guid: dde9dfc47dae17041885eb79195f6549, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 2.5273
+      objectReference: {fileID: 0}
     - target: {fileID: 3786488849243588800, guid: dde9dfc47dae17041885eb79195f6549, type: 3}
       propertyPath: _speed
-      value: 1
+      value: 0.2
       objectReference: {fileID: 0}
     - target: {fileID: 3895707525595542571, guid: dde9dfc47dae17041885eb79195f6549, type: 3}
       propertyPath: _playerAwarenessDistance
-      value: 4
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 4249952603503798126, guid: dde9dfc47dae17041885eb79195f6549, type: 3}
       propertyPath: m_Name
-      value: Goblin
+      value: Boss
       objectReference: {fileID: 0}
     - target: {fileID: 4886526066925290410, guid: dde9dfc47dae17041885eb79195f6549, type: 3}
       propertyPath: m_Controller
       value: 
-      objectReference: {fileID: 9100000, guid: d19fcb4162326d84988feccbc2cf30a4, type: 2}
+      objectReference: {fileID: 9100000, guid: c5fd2f7e15c7b574a97f8d3c622c224e, type: 2}
     - target: {fileID: 5563250574148902555, guid: dde9dfc47dae17041885eb79195f6549, type: 3}
       propertyPath: _damageAmount
-      value: 20
+      value: 70
       objectReference: {fileID: 0}
     - target: {fileID: 6534947944650086086, guid: dde9dfc47dae17041885eb79195f6549, type: 3}
       propertyPath: _currentHealth
-      value: 20
+      value: 150
       objectReference: {fileID: 0}
     - target: {fileID: 6534947944650086086, guid: dde9dfc47dae17041885eb79195f6549, type: 3}
       propertyPath: _maximumHealth
-      value: 20
+      value: 150
+      objectReference: {fileID: 0}
+    - target: {fileID: 6534947944650086086, guid: dde9dfc47dae17041885eb79195f6549, type: 3}
+      propertyPath: OnDied.m_PersistentCalls.m_Calls.Array.size
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 6534947944650086086, guid: dde9dfc47dae17041885eb79195f6549, type: 3}
+      propertyPath: OnDied.m_PersistentCalls.m_Calls.Array.data[7].m_Mode
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6534947944650086086, guid: dde9dfc47dae17041885eb79195f6549, type: 3}
+      propertyPath: OnDied.m_PersistentCalls.m_Calls.Array.data[7].m_Target
+      value: 
+      objectReference: {fileID: 1592072450804055770}
+    - target: {fileID: 6534947944650086086, guid: dde9dfc47dae17041885eb79195f6549, type: 3}
+      propertyPath: OnDied.m_PersistentCalls.m_Calls.Array.data[7].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6534947944650086086, guid: dde9dfc47dae17041885eb79195f6549, type: 3}
+      propertyPath: OnDied.m_PersistentCalls.m_Calls.Array.data[7].m_MethodName
+      value: SetTrigger
+      objectReference: {fileID: 0}
+    - target: {fileID: 6534947944650086086, guid: dde9dfc47dae17041885eb79195f6549, type: 3}
+      propertyPath: OnDied.m_PersistentCalls.m_Calls.Array.data[7].m_TargetAssemblyTypeName
+      value: UnityEngine.Animator, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 6534947944650086086, guid: dde9dfc47dae17041885eb79195f6549, type: 3}
+      propertyPath: OnDied.m_PersistentCalls.m_Calls.Array.data[7].m_Arguments.m_FloatArgument
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6534947944650086086, guid: dde9dfc47dae17041885eb79195f6549, type: 3}
+      propertyPath: OnDied.m_PersistentCalls.m_Calls.Array.data[7].m_Arguments.m_StringArgument
+      value: OnDied
+      objectReference: {fileID: 0}
+    - target: {fileID: 6534947944650086086, guid: dde9dfc47dae17041885eb79195f6549, type: 3}
+      propertyPath: OnDied.m_PersistentCalls.m_Calls.Array.data[7].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 7250953889471149589, guid: dde9dfc47dae17041885eb79195f6549, type: 3}
       propertyPath: _killScore
-      value: 20
-      objectReference: {fileID: 0}
-    - target: {fileID: 8026709649114327074, guid: dde9dfc47dae17041885eb79195f6549, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8026709649114327074, guid: dde9dfc47dae17041885eb79195f6549, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8026709649114327074, guid: dde9dfc47dae17041885eb79195f6549, type: 3}
-      propertyPath: m_LocalScale.z
-      value: 1
+      value: 200
       objectReference: {fileID: 0}
     - target: {fileID: 8026709649114327074, guid: dde9dfc47dae17041885eb79195f6549, type: 3}
       propertyPath: m_LocalPosition.x
@@ -94,12 +130,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8239797132115215522, guid: dde9dfc47dae17041885eb79195f6549, type: 3}
       propertyPath: _chanceOfCollectableDrop
-      value: 0.3
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 9204688206664357648, guid: dde9dfc47dae17041885eb79195f6549, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 2572365745140355499, guid: bdc4da0b1c9991945b82ae6fa47f1dce, type: 3}
+      objectReference: {fileID: -232059377799434497, guid: 2070b55a6cb3b9c40bc2d425ef6be66b, type: 3}
     - target: {fileID: 9204688206664357648, guid: dde9dfc47dae17041885eb79195f6549, type: 3}
       propertyPath: m_WasSpriteAssigned
       value: 1
@@ -109,3 +145,8 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: dde9dfc47dae17041885eb79195f6549, type: 3}
+--- !u!95 &1592072450804055770 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 4886526066925290410, guid: dde9dfc47dae17041885eb79195f6549, type: 3}
+  m_PrefabInstance: {fileID: 6181261836866338160}
+  m_PrefabAsset: {fileID: 0}
