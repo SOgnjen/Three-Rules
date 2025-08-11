@@ -8,6 +8,7 @@ public class HealthController : MonoBehaviour
     [SerializeField]
     private float _maximumHealth;
     public bool IsInvincible;
+    private Animator _animator;
 
     public float RemainingHealth
     {
@@ -23,6 +24,11 @@ public class HealthController : MonoBehaviour
 
     public UnityEvent OnHealthChanged;
 
+    private void Awake()
+    {
+        _animator = GetComponent<Animator>();
+    }
+
     public void TakeDamage(float damageAmount)
     {
         if (_currentHealth == 0)
@@ -36,6 +42,9 @@ public class HealthController : MonoBehaviour
         }
 
         _currentHealth -= damageAmount;
+
+        bool isHit = true;
+        _animator.SetBool("IsHit", isHit);
 
         OnHealthChanged.Invoke();
 
@@ -70,5 +79,10 @@ public class HealthController : MonoBehaviour
             _currentHealth = _maximumHealth;
         }
 
+    }
+
+    public void ResetHit()
+    {
+        _animator.SetBool("IsHit", false);
     }
 }
