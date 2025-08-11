@@ -283,11 +283,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1760237579271470467, guid: 7b2a986870ec60646a0c08bd2b25d93c, type: 3}
       propertyPath: _maximumSpawnTime
-      value: 10
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 1760237579271470467, guid: 7b2a986870ec60646a0c08bd2b25d93c, type: 3}
       propertyPath: _minimumSpawnTime
-      value: 5
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3060232572067725276, guid: 7b2a986870ec60646a0c08bd2b25d93c, type: 3}
       propertyPath: m_LocalPosition.x
@@ -874,6 +874,7 @@ GameObject:
   - component: {fileID: 995637541}
   - component: {fileID: 995637543}
   - component: {fileID: 995637544}
+  - component: {fileID: 995637545}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -1155,6 +1156,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _invincibilityDuration: 3
+  _flashColor: {r: 1, g: 1, b: 1, a: 0.50980395}
+  _numberOfFlashes: 10
 --- !u!114 &995637542
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1216,6 +1219,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!114 &995637545
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 995637532}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c4f2166e3e89a824ebb157d635ae33d0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1185216856
 GameObject:
   m_ObjectHideFlags: 0
