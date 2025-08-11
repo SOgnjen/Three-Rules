@@ -1968,6 +1968,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 750a92036057da04c86ab41cb1d6c5df, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _healthController: {fileID: 0}
 --- !u!61 &1810268051
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2026,6 +2027,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 750a92036057da04c86ab41cb1d6c5df, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _healthController: {fileID: 995637540}
 --- !u!1 &2010528894
 GameObject:
   m_ObjectHideFlags: 0

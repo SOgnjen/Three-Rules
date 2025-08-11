@@ -48,12 +48,12 @@ public class HealthController : MonoBehaviour
 
         OnHealthChanged.Invoke();
 
-        if( _currentHealth < 0 )
+        if (_currentHealth < 0)
         {
             _currentHealth = 0;
         }
 
-        if(_currentHealth == 0 )
+        if (_currentHealth == 0)
         {
             OnDied.Invoke();
         }
@@ -65,7 +65,7 @@ public class HealthController : MonoBehaviour
 
     public void AddHealth(float amoutToAdd)
     {
-        if(_currentHealth == _maximumHealth)
+        if (_currentHealth == _maximumHealth)
         {
             return;
         }
@@ -74,7 +74,7 @@ public class HealthController : MonoBehaviour
 
         OnHealthChanged.Invoke();
 
-        if ( _currentHealth > _maximumHealth )
+        if (_currentHealth > _maximumHealth)
         {
             _currentHealth = _maximumHealth;
         }
@@ -89,5 +89,13 @@ public class HealthController : MonoBehaviour
     public float MaximumHealth
     {
         get { return _maximumHealth; }
+    }
+
+    public void ForceKill()
+    {
+        _currentHealth = 0;
+        OnDied.Invoke();
+
+        _animator.SetBool("IsDead", true);
     }
 }
